@@ -1,0 +1,19 @@
+<!-- include header -->
+<%- include('partial/header')%>
+    <!-- /include header -->
+    <main id="site-main">
+        <div class="studentLogin">
+            <form method="POST" class="studentForm">
+              <div class="mb-3">
+                <label for="rollNo" class="form-label">Roll No : </label>
+                <input type="text" name="rollNo"  class="form-control" id="rollNo">
+                <span id="ROLLNO" class="text-danger font-weight-bold"></span>                                     
+              </div>
+              <a><button type="submit" class="btn btn-primary mr-3">Login</button></a>
+              <a href="/" class="back">Back</a>
+            </form>
+          </div>
+    </main>
+ <!-- include footer -->
+<%- include('partial/footer')%>
+<!-- /include footer -->

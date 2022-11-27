@@ -1,0 +1,49 @@
+<form action="/api/user" method="POST" class="addSTudent" id="addUser" onsubmit="return validation()">
+    <div class="newUser">
+        <div class="form-group">
+            <div class="mb-3">
+                <label for="rollNo" class="form-label">Roll No. : </label>
+                <input type="number"  name="rollNo"  class="form-control" id="rollNo">
+                <span id="ROLLNO" class="text-danger font-weight-bold"></span>          
+            </div>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name : </label>
+                <input type="text" name="name"  class="form-control" id="name">
+                <span id="NAME" class="text-danger font-weight-bold"></span>
+            </div>
+            <div class="mb-3">
+                <label for="physic" class="form-label">Physics : </label>
+                <input type="number" name="physic" class="form-control" id="physic">
+                <span id="PHYSIC" class="text-danger font-weight-bold"></span>
+            </div>
+            <div class="mb-3">
+                <label for="math" class="form-label">Math : </label>
+                <input type="number" name="math" class="form-control" id="math">
+                <span id="MATH" class="text-danger font-weight-bold"></span>
+            </div>
+            <div class="mb-3">
+                <label for="english" class="form-label">English : </label>
+                <input type="number" name="english" class="form-control" id="english">
+                <span id="ENGLISH" class="text-danger font-weight-bold"></span>
+            </div>
+            <div class="mb-3">
+                <label for="hindi" class="form-label">Hindi : </label>
+                <input type="number" name="hindi" class="form-control" id="hindi">
+                <span id="HINDI" class="text-danger font-weight-bold"></span>
+            </div>
+            <div class="mb-3">
+                <label for="science" class="form-label">Science : </label>
+                <input type="number" name="science" class="form-control" id="science">
+                <span id="SCIENCE" class="text-danger font-weight-bold"></span>
+            </div>
+            <div class="mb-3">
+                <label for="status" class="form-label">Status (pass/fail) : </label>
+                <input type="text" name="status"  class="form-control" id="status">
+                <span id="STATUS" class="text-danger font-weight-bold"></span>
+            </div>
+            <button type="submit" class="btn btn-success mr-3">Add</button>
+            <a href="/viewall" class="back">Back</a>
+
+        </div>
+    </div>
+</form>

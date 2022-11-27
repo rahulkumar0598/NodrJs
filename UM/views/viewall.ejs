@@ -1,0 +1,62 @@
+<!-- include header -->
+<%- include('partial/header')%>
+    <!-- /include header -->
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <a href="/addStudent" class="">
+                    <span class="text-gradient">
+                        Add New Student
+                        <i class="fas fa-user"></i>
+                    </span>
+                </a>
+
+            </div>
+        </div>
+        <form action="/" method="POST">
+            <div class="tableDiv">
+                <table class=" table-striped table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Roll No</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Physics</th>
+                            <th scope="col">Math</th>
+                            <th scope="col">English</th>
+                            <th scope="col">Hindi</th>
+                            <th scope="col">Science</th>
+                            <th scope="col">Status(Pass/Fail)</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for(var i=0;i<user.length;i++) { %> 
+                        <tr>
+                            <td scope="col"><%= i+1 %></td>
+                            <td><%= user[i].rollNo %></td>
+                            <td><%= user[i].name %></td>
+                            <td><%= user[i].physic %></td>
+                            <td><%= user[i].math %></td>
+                            <td><%= user[i].english %></td>
+                            <td><%= user[i].hindi %></td>
+                            <td><%= user[i].science %></td>
+                            <td><%= user[i].status %></td>
+                            <td>
+                                <a href="/editStudent?id=<%= user[i]._id %>" class="btn border-show update">
+                                    <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+                                </a>
+                                <a class="btn border-show delete" data-id=<%= user[i]._id %>>
+                                    <span class="text-gradient"><i class="fas fa-times"></i></span>
+                                </a>
+                            </td>
+                        </tr>
+                        <% } %>
+                    </tbody>
+                </table>
+            </div>
+        </form>
+    </main>
+ <!-- include footer -->
+<%- include('partial/footer')%>
+<!-- /include footer -->
